@@ -4,9 +4,10 @@ from wtforms import StringField, PasswordField, SubmitField, TextAreaField
 from wtforms.validators import DataRequired, Length, Email
 import smtplib
 from flask_bootstrap import Bootstrap5
+import os
 
 app = Flask(__name__)
-app.secret_key = "any-string-you-want-just-keep-it-secret"
+app.secret_key = os.environ.get('APP_KEY')
 bootstrap = Bootstrap5(app)
 
 class ContactForm(FlaskForm):
