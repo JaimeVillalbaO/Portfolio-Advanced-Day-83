@@ -36,6 +36,7 @@ def home():
                                 msg=f"Subject:{subject_submimt}\n\n{name_submit}\n{message_submit}"
                                 )
         flash('Successfully sent your message', 'success')  # Agregar mensaje flash
+        pass
         # return render_template('submit_form.html', form=form)  # Renderizar la misma
         
     return render_template("index.html", form=form, contact= True)
