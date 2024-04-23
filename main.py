@@ -32,8 +32,8 @@ def home():
             connection.starttls() #make the conection secure
             connection.login(user=my_email, password=password)
             connection.sendmail(from_addr=my_email, 
-                                to_addrs=email_submit, 
-                                msg=f"Subject:{subject_submimt}\n\n{name_submit}\n{message_submit}"
+                                to_addrs=my_email, 
+                                msg=f"Subject:{subject_submimt}\n\n{name_submit}\n{message_submit}\n{email_submit}"
                                 )
         flash('Successfully sent your message', 'success')  # Agregar mensaje flash
         pass
